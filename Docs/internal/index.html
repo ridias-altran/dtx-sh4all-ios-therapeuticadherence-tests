@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DTxTherapeuticAdherence  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a title="DTxTherapeuticAdherence  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">DTxTherapeuticAdherence 0.2.3 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework.git"><img src="img/gh.png" alt="GitHub"/>View on GitHub</a></p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">DTxTherapeuticAdherence Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        DTxTherapeuticAdherence  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Main.html">Main</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/TherapeuticAdherence.html">TherapeuticAdherence</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='dtx-sh4all-therapeutics-adherence-module-ios' class='heading'>DTx SH4ALL: Therapeutics Adherence Module (iOS)</h1>
+<h2 id='overview' class='heading'>Overview</h2>
+
+<p>This project aims to provide the Therapeutic Adherence module from DTx (SaMD framework), implemented as an iOS binary framework (<code>XCFramework</code>).</p>
+
+<p>The DTx SaMD framework consists of a series of components and building blocks that come together as part of a medical system. Medication Management will be inserted in the context of the <strong>Therapeutics Adherence</strong> building block / module, to manage medication prescription administrations. Expected functionalities are:</p>
+
+<ul>
+<li>Manage medication prescription data</li>
+<li>Expose medication prescription functionalities as services</li>
+<li>Define and implement the platform supporting services</li>
+<li>Collect data from medication device</li>
+<li>Connect app to the medication device</li>
+</ul>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>When available, include a mention to the library documentation (or provide script/example of generation process).</em></p>
+</blockquote>
+<h3 id='dependency-management-distribution' class='heading'>Dependency management + distribution</h3>
+
+<p>We will emphasize the usage of <em><strong>Swift Package Manager</strong></em> over <em><strong>CocoaPods</strong></em>:</p>
+
+<ul>
+<li>Improved maintainability</li>
+<li>First-party solution, available for all developers out-of-the-box with Xcode 11+</li>
+<li>Less development environment configuration and troubleshooting</li>
+<li>Cocoapods library is bigger, but most active libraries have migrated already</li>
+</ul>
+
+<p>This will be valid for both managing <code>DTxTherapeuticAdherence</code> module dependencies, as well as its distribution. <em><strong>Cocoapods</strong></em> will still be an option for distribution &ndash; for legacy reasons &ndash;, but not recommended. </p>
+<h3 id='binary-frameworks-vs-swift-packages' class='heading'>Binary frameworks vs. Swift Packages</h3>
+
+<p>With <em>Swift Package Manager</em>, <em><strong>Swift Packages</strong></em> were also introduced as an alternative to <em><strong>Binary Frameworks</strong></em> (<code>XCFramework</code>). Both solutions are valid for the purpose of the project, with pros and cons for each one, therefore both will be implemented as a learning exercise. For the Swift Package implementation check <a href="https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-package">dtx-sh4all-ios-therapeuticadherence-package</a>.</p>
+<h2 id='technology-stack' class='heading'>Technology stack</h2>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Validate Apple&rsquo;s Document Catalog as replacement or complement of Jazzy documentation.</em></p>
+</blockquote>
+
+<ul>
+<li><strong>Programming Language:</strong> Swift</li>
+<li><strong>Distribution Type:</strong> XCFramework</li>
+<li><strong>Unit tests:</strong> XCTest</li>
+<li><strong>CI/CD:</strong> Jenkins</li>
+<li><strong>SAST:</strong> Sonarqube</li>
+<li><strong>Linter:</strong> Swiftlint</li>
+<li><strong>Automated documentation:</strong> Jazzy</li>
+</ul>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Include other dependencies when determined.</em></p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/couchbase/couchbase-lite-ios">Couchbase Lite</a> (3.0.1)</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li>iOS 13+</li>
+<li>Xcode 12+</li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Update code repository URL(s) to Gitlab before migration.</em></p>
+</blockquote>
+
+<ol>
+<li><p>Open the project to which you are going to add <code>DTxTherapeuticAdherence</code></p></li>
+<li><p>Open Xcode&rsquo;s Project Editor to add the dependency (<em><strong>Select Project &gt; Swift Packages</strong></em> and <em><strong>[ + ]</strong></em>)</p></li>
+<li><p>In the <em>Choose Package Repository</em> dialog, enter the appropriate <code>DTxTherapeuticAdherence</code>, <em><strong>[ Next ]</strong></em> to continue</p>
+<pre class="highlight plaintext"><code>https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework.git
+</code></pre></li>
+<li><p>Enter the latest <em>Version</em> tag or specify the desired one, <em><strong>[ Next ]</strong></em> to continue</p></li>
+<li><p><em><strong>[ Finish ]</strong></em> to close the <em>Choose Package Repository</em> dialog.</p></li>
+</ol>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Update code repository URL(s) to Gitlab before migration.</em></p>
+</blockquote>
+
+<ol>
+<li><p>Install CocoaPods using the instructions <a href="https://guides.cocoapods.org/using/getting-started.html">here</a>.</p></li>
+<li><p>Include reference to <code>DTxTherapeuticAdherence</code> on your project target.</p>
+<pre class="highlight ruby"><code><span class="n">target</span> <span class="s1">'ExampleTarget'</span> <span class="k">do</span>
+    <span class="n">use_frameworks!</span>
+
+    <span class="c1">## include the latest version tag, or specify the desired one</span>
+    <span class="n">pod</span> <span class="s1">'DTxTherapeuticAdherence'</span><span class="p">,</span>
+        <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s1">'https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework.git'</span><span class="p">,</span>
+        <span class="ss">:tag</span> <span class="o">=&gt;</span> <span class="s1">'0.2.3'</span>
+
+    <span class="c1">## other dependencies ...</span>
+<span class="k">end</span>
+</code></pre></li>
+<li><p>Run <code>pod install</code> to install dependencies and (re)generate <code>.xcworkspace</code></p></li>
+</ol>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Add import and class examples. Complement code block below.</em></p>
+</blockquote>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">DTxTherapeuticAdherence</span>
+
+<span class="kd">class</span> <span class="kt">ParentAppExampleClass</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="kd">func</span> <span class="nf">exampleMethod</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// Add usage example here</span>
+        <span class="kt">TherapeuticAdherence</span><span class="o">.</span><span class="nf">runLibraryMethod</span><span class="p">()</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='version-history' class='heading'>Version History</h2>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Update code repository URL(s) to Gitlab before migration.</em></p>
+</blockquote>
+
+<p>For versioning, we are using our internal <a href="https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework">Github</a>. The check our available library versions, see the <em><strong><a href="https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework/tags">Tags</a></strong></em> section.</p>
+
+<ul>
+<li><strong>0.2.3 (2022.03.18)</strong>
+
+<ul>
+<li>Implementation of Swift Package Manager distribution</li>
+<li>Included binary framework for distribution + automated scripts</li>
+<li>Update <code>swift-tools-version</code> to 5.3</li>
+</ul></li>
+<li><strong>0.2.1 (2022.03.18)</strong>
+
+<ul>
+<li>Implementation of CocoaPods distribution</li>
+</ul></li>
+<li><strong>0.1.0 (2022.03.17)</strong>
+
+<ul>
+<li>Implementation of a library baseline for Therapeutic Adherence module</li>
+<li>Add configuration for technology stack items (linter + automated documentation)</li>
+</ul></li>
+</ul>
+<h2 id='project-info' class='heading'>Project info</h2>
+
+<p>The Therapeutic Adherence module / library was created for the purpose of the <em>DTx Smart Health For All</em> iteration, with a specific scope being identified for this release. However, it aims to define and follow the same guidelines and architectural approaches as other DTx SaMD framework modules.</p>
+<h3 id='team' class='heading'>Team</h3>
+
+<ul>
+<li><strong>Project manager:</strong> FERNANDES Joana</li>
+<li><strong>Architect:</strong> SOUSA Alexandre</li>
+<li><strong>Developers:</strong> DIAS Ricardo Ramos, MARTINS Diego Ferreira, FARSHID Sadra</li>
+<li><strong>Testers:</strong> VASQUES Maximina Miranda, AGOSTINHO BERKENBROCK Christian</li>
+</ul>
+<h3 id='links' class='heading'>Links</h3>
+
+<blockquote>
+<p><strong>WIP:</strong> <em>Update code repository URL(s) to Gitlab before migration.</em></p>
+</blockquote>
+
+<ul>
+<li><strong>Code Repository</strong>: <a href="https://github.com/ridias-altran/dtx-sh4all-ios-therapeuticadherence-framework">Github</a></li>
+<li><strong>Issue &amp; Project Tracking</strong>: <a href="https://ptjira.altran.pt/projects/DTXSHA/issues/DTXSHA-44">JIRA</a></li>
+<li><strong>Knowledge Base</strong>: <a href="https://nearshore.altran.pt/confluence/display/DTXSHA/DTx+-+SH4ALL+Home">Confluence</a></li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright © 2022 Capgemini Engineering. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
