@@ -1,0 +1,11 @@
+framework module DTxTherapeuticAdherence {
+  umbrella header "DTxTherapeuticAdherence.h"
+
+  export *
+  module * { export * }
+}
+
+module DTxTherapeuticAdherence.Swift {
+    header "DTxTherapeuticAdherence-Swift.h"
+    requires objc
+}
